@@ -1,0 +1,201 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(2, 2, 41);
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+main{
+    flex: 1;
+    display:flex;
+    align-items: center;
+    padding: 4% 4%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+
+.contenedor_area_insertar{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    float: left;
+}
+.contenedor_area_resultado{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-right: 15px;
+    height: 720px;
+    width: 400px;
+    box-shadow: 4px 2px 4px 0 #079cff,
+                -1px 0 1px 0 #079cff;
+}
+.area_texto_insertar{
+    color: white;
+    background-color: transparent;
+    border: transparent;
+    height: 500px;
+    width: 100%;
+    resize: none;
+    font-size: 32px;
+}
+#insertar::placeholder{
+    color: white
+}
+.imagen{
+    height: auto;
+    width: auto;
+    visibility: visible;
+    margin-top: 150px;
+}
+
+.contenedor__area_guia{
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+.contenedor__area_respuesta{
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+.texto_guia{
+    width: 336px;
+    text-align: center;
+    color: #495057;
+}
+.texto_guia_aviso{
+    width: 336px;
+    text-align: center;
+    color: black;
+}
+
+.text_advertencia{
+    margin-top: 75px;
+}
+.contenedor__boton{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenedor__respuesta{
+    height: 650px;
+    width: 350px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.area_texto_resultado{
+    margin-top: 25px;
+    height: 580px;
+    width: 80%;
+    color: black;
+    border: white;
+    resize: none;
+    font-size: 24pt;
+}
+/* Botones */
+.boton_insertar{
+    width: 328px;
+    height: 67px;
+    border: #D3D3D3;
+    background-color: white;
+    margin-right: 27px;
+    border-radius: 15px;
+}
+.boton_copiar{
+    width: 82%;
+    height: 67px;
+    bottom: 0;
+    margin-left: 30px;
+    background-color: white;
+    margin-top: -10px;
+    border-radius: 15px;
+    text-align: center;
+}
+.boton_insertar:hover{
+    background-color: #D3D3D3;
+}
+.boton_copiar:hover{
+    background-color: #D3D3D3;
+}
+
+
+/* footer*/
+.footer{
+    background-color: rgba(255, 255, 255, 0.062);
+    height: 81px;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+@media (max-width: 1290px){
+    main{
+        flex-direction: column;
+        padding: 5%;
+    }
+    .contenedor_area_insertar{
+        width: auto;
+        margin-right: 5%;
+    }
+    .area_texto_insertar{
+        width: 100%;
+        margin-right: 15%;
+    }
+    .contenedor__boton{
+        width: auto;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    .boton_insertar{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .contenedor_area_resultado{
+        width: auto;
+        margin-left: 5%;
+    }
+    
+    .imagen{
+        width: 100%;
+    }
+    .contenedor__texto{
+        flex-direction: column;
+        width: auto;
+    }
+    .contenedor__respuesta{
+        flex-direction: column;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .area_texto_resultado{
+        width: 100%;
+    }
+    .boton_copiar{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .texto_guia_aviso{
+        width: auto;
+    }
+    .texto_guia{
+        width: auto;
+    }
+    .footer{
+        width: 100%;
+    }
+}

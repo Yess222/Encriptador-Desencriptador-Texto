@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    
+    <main >
+        <div class="contenedor_area_insertar">
+            <textarea class="area_texto_insertar" onkeyup="mostrarTiempoRealAdvertencia(this.value)" id="insertar" placeholder="Ingrese el texto aqui"></textarea>
+            <h4 class="text_advertencia"  id="advertencia">Solo letras minúsculas y sin acentos</h3>
+            <div class="contenedor__boton">
+                <button  onclick="encriptarInput();" id="encriptador" class="boton_insertar">Encriptar</button> 
+                <button  onclick="desencriptarInput();" id="desencriptador" class="boton_insertar">Desencriptar</button>
+            </div>
+        </div>    
+        <div class="contenedor_area_resultado">
+            <div class="contenedor__area_guia" id="area_guia" >
+                <img class="imagen" src="assets/image/Muñeco.png">
+                <div class="contenedor__texto">
+                    <h2 class="texto_guia_aviso">Ningún mensaje fue encontrado</h2>
+                    <h4 class="texto_guia">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                </div>
+            </div>
+            <div class="contenedor__area_respuesta" id="area_resultado" hidden >
+                <div class="contenedor__respuesta">
+                    <textarea class="area_texto_resultado" id="resultado_area" readonly="readonly">
+                    </textarea>
+                </div>
+                <button id="botonCopiar" class="boton_copiar">Copiar</button>
+            </div>   
+        </div>
+        
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Jesús Victor Zavaleta Serva</p>
+    </footer>
+    <script src="assets/app.js"></script>
+</body>
+</html>
