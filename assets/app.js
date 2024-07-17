@@ -64,7 +64,7 @@ function mostrarListaEnTexto(tipo){
 
 function encriptarInput(){
     let texto_area = document.getElementById("insertar").value;
-    if(/^[a-z\s]+$/.test(texto_area)){
+    if(/^[a-z\s?¿"']+$/.test(texto_area)){
         respuesta = encriptadorDeTexto(texto_area);
         console.log(mostrarListaEnTexto(respuesta));
         document.getElementById('area_guia').setAttribute('hidden', false);
@@ -78,7 +78,7 @@ function encriptarInput(){
 
 function desencriptarInput(){
     let texto_area = document.getElementById("insertar").value;
-    if(/^[a-z\s]+$/.test(texto_area)){
+    if(/^[a-z\s?¿"']+$/.test(texto_area)){
         respuesta = desencriptadorDeTexto(texto_area);
         console.log(mostrarListaEnTexto(respuesta));
         document.getElementById('area_guia').setAttribute('hidden', false);
@@ -94,7 +94,7 @@ function desencriptarInput(){
 function mostrarTiempoRealAdvertencia(valor){
 
     
-    if(/^[a-z\s]+$/.test(valor)){
+    if(/^[a-z\s?¿"']+$/.test(valor)){
         document.getElementById("encriptador").removeAttribute('disabled');
         document.getElementById("desencriptador").removeAttribute('disabled');
         document.getElementById("advertencia").style.color = "white";  
