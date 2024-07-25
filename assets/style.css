@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html,body{
     height: 100%;
     margin: 0;
@@ -8,6 +13,27 @@ body{
     background-color: rgb(2, 2, 41);
     color: #FFFFFF;
     box-sizing: border-box;
+
+    background-image: linear-gradient(
+        to bottom right,
+        #020229 0%,   /* Azul muy oscuro */
+        #0a0a50 20%,  /* Azul oscuro */
+        #14147a 40%,  /* Azul intermedio */
+        #1e1ea3 60%,  /* Azul claro */
+        #2828cc 80%   /* Azul más claro */
+    );
+    background-size: 200% 200%;
+
+    animation: movimiento 5s linear infinite alternate;
+}
+
+@keyframes movimiento{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100% 100%;
+    }
 }
 
 main{
@@ -19,7 +45,6 @@ main{
     gap: 82px;
 }
 
-
 .contenedor_area_insertar{
     padding: 0.5rem;
     display: flex;
@@ -27,17 +52,53 @@ main{
     margin-left: 20px;
     float: left;
 }
-.contenedor_area_resultado{
-    border-radius: 15px;
+.contenedor_area_resultado {
     display: flex;
     flex-direction: column;
     background-color: white;
     margin-right: 15px;
     height: 720px;
     width: 400px;
-    box-shadow: 4px 2px 4px 0 #079cff,
-                -1px 0 1px 0 #079cff;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
+
+.contenedor_area_resultado:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #3498db;
+        transform: scale(1.05);
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+.contenedor_area_resultado:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #3498db;
+    border-radius: 25px;
+    animation: borderAnimation 1s infinite;
+    z-index: -1;
+}
+
+
 .area_texto_insertar{
     color: white;
     background-color: transparent;
@@ -69,6 +130,7 @@ main{
 }
 .texto_guia{
     width: 336px;
+    margin-top: 12px;
     text-align: center;
     color: #495057;
 }
@@ -94,6 +156,9 @@ main{
     margin-left: 30px;
     margin-right: 30px;
 }
+.contenedor__texto{
+    margin-top: 32px;
+}
 .area_texto_resultado{
     margin-top: 25px;
     height: 580px;
@@ -118,7 +183,7 @@ main{
     bottom: 0;
     margin-left: 30px;
     background-color: white;
-    margin-top: -10px;
+    margin-top: -20px;
     border-radius: 15px;
     text-align: center;
 }
@@ -132,7 +197,7 @@ main{
 
 /* footer*/
 .footer{
-    background-color: rgba(255, 255, 255, 0.062);
+    background-color: rgba(37, 30, 30, 0.062);
     height: 81px;
     text-align: center;
     font-size: 1.5rem;
@@ -140,11 +205,18 @@ main{
     bottom: 0;
     margin-top: auto;
 }
-
+.texto_footer{
+    margin-top: 23px;
+}
 @media (max-width: 1290px){
     main{
         flex-direction: column;
         padding: 5%;
+    }
+    body {
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        background-size: 100% 100%;
     }
     .contenedor_area_insertar{
         width: auto;
