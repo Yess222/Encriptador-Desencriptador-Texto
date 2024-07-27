@@ -13,7 +13,7 @@ body {
     background-color: rgb(2, 2, 41);
     color: #FFFFFF;
     box-sizing: border-box;
-
+    
     background-image: linear-gradient(
         to bottom right,
         #010116 0%,   /* Azul más oscuro */
@@ -53,9 +53,6 @@ main{
     float: left;
 }
 .contenedor_area_resultado {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
     margin-right: 15px;
     height: 720px;
     width: 400px;
@@ -65,11 +62,16 @@ main{
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    background: linear-gradient(
+        to right,
+        #0387af, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #00208a  /* Azul más claro (como en el body) */
+    );
 }
 
 .contenedor_area_resultado:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-color: #3498db;
+    border-color: #010e16;
 }
 
 @keyframes borderAnimation {
@@ -77,13 +79,11 @@ main{
         border-color: transparent;
     }
     50% {
-        border-color: #3498db;
+        border-color: #052236;
         transform: scale(1.05);
     }
-    100% {
-        border-color: transparent;
-    }
 }
+
 
 .contenedor_area_resultado:hover::before {
     content: '';
@@ -92,7 +92,7 @@ main{
     left: -5px;
     right: -5px;
     bottom: -5px;
-    border: 2px solid #3498db;
+    border: 2px solid #021ebd;
     border-radius: 25px;
     animation: borderAnimation 1s infinite;
     z-index: -1;
@@ -132,12 +132,12 @@ main{
     width: 336px;
     margin-top: 12px;
     text-align: center;
-    color: #495057;
+    color: white;
 }
 .texto_guia_aviso{
     width: 336px;
     text-align: center;
-    color: black;
+    color: white;
 }
 
 .text_advertencia{
@@ -163,8 +163,12 @@ main{
     margin-top: 25px;
     height: 580px;
     width: 80%;
-    color: black;
-    border: white;
+    color: white;
+    background: linear-gradient(
+        to right,
+        #0387af, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #00208a  /* Azul más claro (como en el body) */
+    );
     resize: none;
     font-size: 24pt;
 }
@@ -172,8 +176,12 @@ main{
 .boton_insertar{
     width: 328px;
     height: 67px;
-    border: #D3D3D3;
-    background-color: white;
+    color:white;
+    background: linear-gradient(
+        to right,
+        #0490d1, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #00758a  /* Azul más claro (como en el body) */
+    );
     margin-right: 27px;
     border-radius: 15px;
 }
@@ -182,16 +190,23 @@ main{
     height: 67px;
     bottom: 0;
     margin-left: 30px;
-    background-color: white;
+    color:white;
+    background: linear-gradient(
+        to right,
+        #0490d1, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #00758a  /* Azul más claro (como en el body) */
+    );
     margin-top: -20px;
     border-radius: 15px;
     text-align: center;
 }
 .boton_insertar:hover{
-    background-color: #D3D3D3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: #0094f0;
 }
 .boton_copiar:hover{
-    background-color: #D3D3D3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: #0094f0;
 }
 
 
