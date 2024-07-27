@@ -7,8 +7,8 @@ html,body{
     height: 100%;
     margin: 0;
 }
-body{
-    display:flex;
+body {
+    display: flex;
     flex-direction: column;
     background-color: rgb(2, 2, 41);
     color: #FFFFFF;
@@ -16,22 +16,22 @@ body{
 
     background-image: linear-gradient(
         to bottom right,
-        #020229 0%,   /* Azul muy oscuro */
-        #0a0a50 20%,  /* Azul oscuro */
-        #14147a 40%,  /* Azul intermedio */
-        #1e1ea3 60%,  /* Azul claro */
-        #2828cc 80%   /* Azul más claro */
+        #010116 0%,   /* Azul más oscuro */
+        #050532 20%,  /* Azul muy oscuro */
+        #0a0a50 40%,  /* Azul oscuro */
+        #0f0f6d 60%,  /* Azul intermedio */
+        #14147a 80%   /* Azul más claro */
     );
     background-size: 200% 200%;
 
     animation: movimiento 5s linear infinite alternate;
 }
 
-@keyframes movimiento{
-    from{
+@keyframes movimiento {
+    from {
         background-position: 0 0;
     }
-    to{
+    to {
         background-position: 100% 100%;
     }
 }
