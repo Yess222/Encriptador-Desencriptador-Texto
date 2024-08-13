@@ -8,6 +8,7 @@ html,body{
     margin: 0;
 }
 body {
+    
     display: flex;
     flex-direction: column;
     background-color: rgb(2, 2, 41);
@@ -16,15 +17,15 @@ body {
     
     background-image: linear-gradient(
         to bottom right,
-        #010116 0%,   /* Azul más oscuro */
-        #050532 20%,  /* Azul muy oscuro */
-        #0a0a50 40%,  /* Azul oscuro */
-        #0f0f6d 60%,  /* Azul intermedio */
-        #14147a 80%   /* Azul más claro */
+        #08428C 0%,   /* Azul más oscuro */
+        #155FBF 20%,  /* Azul muy oscuro */
+        #173F73 40%,  /* Azul oscuro */
+        #0e4fc9 60%,  /* Azul intermedio */
+        #0b33b6 80%   /* Azul más claro */
     );
     background-size: 200% 200%;
 
-    animation: movimiento 5s linear infinite alternate;
+    animation: movimiento 15s linear infinite alternate;
 }
 
 @keyframes movimiento {
@@ -64,8 +65,8 @@ main{
     transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
     background: linear-gradient(
         to right,
-        #0387af, /* Azul oscuro (más claro que el tono más oscuro del body) */
-        #00208a  /* Azul más claro (como en el body) */
+        #045496, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #0265be  /* Azul más claro (como en el body) */
     );
 }
 
@@ -166,8 +167,8 @@ main{
     color: white;
     background: linear-gradient(
         to right,
-        #0387af, /* Azul oscuro (más claro que el tono más oscuro del body) */
-        #00208a  /* Azul más claro (como en el body) */
+        #08428C, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #155FBF 
     );
     resize: none;
     font-size: 24pt;
@@ -179,8 +180,8 @@ main{
     color:white;
     background: linear-gradient(
         to right,
-        #0490d1, /* Azul oscuro (más claro que el tono más oscuro del body) */
-        #00758a  /* Azul más claro (como en el body) */
+        #045496, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #0265be  
     );
     margin-right: 27px;
     border-radius: 15px;
@@ -193,8 +194,8 @@ main{
     color:white;
     background: linear-gradient(
         to right,
-        #0490d1, /* Azul oscuro (más claro que el tono más oscuro del body) */
-        #00758a  /* Azul más claro (como en el body) */
+        #045496, /* Azul oscuro (más claro que el tono más oscuro del body) */
+        #0265be  
     );
     margin-top: -20px;
     border-radius: 15px;
@@ -212,7 +213,7 @@ main{
 
 /* footer*/
 .footer{
-    background-color: rgba(37, 30, 30, 0.062);
+    background-color: #08428C;
     height: 81px;
     text-align: center;
     font-size: 1.5rem;
